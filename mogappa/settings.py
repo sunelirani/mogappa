@@ -83,6 +83,7 @@ DATABASES = {
         'PASSWORD':'admin',
         'HOST': 'localhost',
         'PORT': '3306',
+        'OPTIONS': { 'autocommit': True, }, 
     }
 }
 

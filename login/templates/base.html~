@@ -1,0 +1,31 @@
+{% load	staticfiles %}
+<html>
+    <head>
+	<title>Mogappa</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{%	static	"css/login.css"	%}"> 
+        <link	href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">  
+    </head>
+    <body>
+        <div class="page-header">
+            <h10>For writing your own story kindly login here</h10>
+            <br>
+            <h2><a href="{% url "login.views.login_user" %}" class="top-menu"><span >Login</span></a></h2>
+	    <h1><a href="/">Mogappa</a></h1>
+	</div>
+	<div class="content container">
+	    <div class="row">
+	        <div class="col-md-8">
+		    {% block content %}
+		        	   
+		    {% endblock %}
+		</div>
+            </div>
+	</div>
+        <script type="text/javascript" src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+        <script>
+        $.backstretch(src="{% static 'img/bg.jpg' %}", {speed: 500});
+        </script>
+    </body>
+</html>

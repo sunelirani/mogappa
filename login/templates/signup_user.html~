@@ -27,39 +27,23 @@
   </head>
 
   <body>
-
-     
        	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" method="post" action=" {% url 'login.views.login_user' %}">
+		      <form class="form-login" method="post" action=" {% url 'login.views.signup_user' %}">
                           {% csrf_token %}
-		        <h2 class="form-login-heading">Login now</h2>
+		        <h2 class="form-login-heading">Sign in now</h2>
 		        <div class="login-wrap">
-                        <h5>Enter your userid and password</h5>
 		            <input type="text" name="username" class="form-control" placeholder="User ID" autofocus>
+                            <br>
+                            <input type="email" name="email" class="form-control" placeholder="Email ID">
 		            <br>
 		            <input type="password" name="password" class="form-control" placeholder="Password">
-		            <label class="checkbox">
-		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-		
-		                </span>
-		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i>LOGIN</button>
-		            <hr>
-		            
-		            <div class="login-social-link centered">
-		            <p>Or you can sign in via your social network</p>
-		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
-		            </div>
-		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" href="{% url "login.views.signup_user" %}">
-		                    Create an account
-		                </a>
-		            </div>
+                            <br>
+                            <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password">
+		            <br>
+		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN UP</button>
+		            <br>
 		
 		        </div>
 		
@@ -96,10 +80,7 @@
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="{% static 'js/jquery.backstretch.min.js' %}"></script>
-    <script>
-        $.backstretch(src="{% static 'img/bg.jpg' %}" class="img-circle" , {speed: 500});
-    </script>
+    <script type="text/javascript" src="{% static 'js/jquery.backstretch.min.js' %}"></script
 
   </body>
 </html>
